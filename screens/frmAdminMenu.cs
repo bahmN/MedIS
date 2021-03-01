@@ -11,9 +11,9 @@ namespace MedIS
     {
         public frmAdminMenu()
         {
-            
+
             InitializeComponent();
-            
+
         }
 
         private void frmAdminMenu_Load(object sender, EventArgs e)
@@ -33,6 +33,11 @@ namespace MedIS
         {
             frmAddPersonal fAP = new frmAddPersonal();
             fAP.ShowDialog();
+        }
+
+        private void frmAdminMenu_Activated(object sender, EventArgs e)
+        {
+            frmAdminMenu_Load(sender, e);
         }
     }
 }
