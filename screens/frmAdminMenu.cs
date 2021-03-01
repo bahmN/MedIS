@@ -3,6 +3,7 @@ using MedIS.screens;
 using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace MedIS
@@ -29,6 +30,7 @@ namespace MedIS
             dataGridViewUsr.Columns[0].Width = 100;
         }
 
+        // Добавление персонала
         private void bttnAddPerson_Click(object sender, EventArgs e)
         {
             frmAddPersonal fAP = new frmAddPersonal();
@@ -38,6 +40,20 @@ namespace MedIS
         private void frmAdminMenu_Activated(object sender, EventArgs e)
         {
             frmAdminMenu_Load(sender, e);
+        }
+
+        // Импорт базы данных
+        private void bttnImport_Click(object sender, EventArgs e)
+        {
+            Backup import = new Backup();
+            import.import(openFile);
+        }
+
+        // Экспорт базы данных
+        private void bttnExport_Click(object sender, EventArgs e)
+        {
+            Backup export = new Backup();
+            export.export(saveFile);
         }
     }
 }

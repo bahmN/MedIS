@@ -43,6 +43,8 @@ namespace MedIS
             this.labelSpec = new System.Windows.Forms.Label();
             this.labelTxtPos = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.saveFile = new System.Windows.Forms.SaveFileDialog();
+            this.openFile = new System.Windows.Forms.OpenFileDialog();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsr)).BeginInit();
             this.SuspendLayout();
@@ -147,6 +149,7 @@ namespace MedIS
             this.bttnImport.TabIndex = 4;
             this.bttnImport.Text = "Импорт базы данных";
             this.bttnImport.UseVisualStyleBackColor = false;
+            this.bttnImport.Click += new System.EventHandler(this.bttnImport_Click);
             // 
             // bttnExport
             // 
@@ -163,6 +166,7 @@ namespace MedIS
             this.bttnExport.TabIndex = 5;
             this.bttnExport.Text = "Экспорт базы данных";
             this.bttnExport.UseVisualStyleBackColor = false;
+            this.bttnExport.Click += new System.EventHandler(this.bttnExport_Click);
             // 
             // labelNotePos
             // 
@@ -208,6 +212,10 @@ namespace MedIS
             this.label1.TabIndex = 9;
             this.label1.Text = "txt";
             // 
+            // openFile
+            // 
+            this.openFile.FileName = "openFileDialog1";
+            // 
             // frmAdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,6 +259,8 @@ namespace MedIS
         private System.Windows.Forms.Label labelSpec;
         private System.Windows.Forms.Label labelTxtPos;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.SaveFileDialog saveFile;
+        private System.Windows.Forms.OpenFileDialog openFile;
     }
 }
 
