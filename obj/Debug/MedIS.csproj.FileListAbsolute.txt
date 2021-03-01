@@ -1,0 +1,10 @@
+D:\cSharp\MedIS\bin\Debug\MedIS.exe.config
+D:\cSharp\MedIS\bin\Debug\MedIS.exe
+D:\cSharp\MedIS\bin\Debug\MedIS.pdb
+D:\cSharp\MedIS\obj\Debug\MedIS.csprojAssemblyReference.cache
+D:\cSharp\MedIS\obj\Debug\MedIS.Properties.Resources.resources
+D:\cSharp\MedIS\obj\Debug\MedIS.csproj.GenerateResource.cache
+D:\cSharp\MedIS\obj\Debug\MedIS.csproj.CoreCompileInputs.cache
+D:\cSharp\MedIS\obj\Debug\MedIS.exe
+D:\cSharp\MedIS\obj\Debug\MedIS.pdb
+D:\cSharp\MedIS\obj\Debug\MedIS.AdminMenu.resources
