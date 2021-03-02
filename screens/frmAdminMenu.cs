@@ -77,13 +77,10 @@ namespace MedIS
         // Поиск
         private void tbNotePos_TextChanged(object sender, EventArgs e)
         {
-            Connection connection = new Connection();
-            MySqlDataAdapter daSearch = new MySqlDataAdapter("SELECT `ФИО врача`, Должность, Специализация FROM персонал " +
-                      "WHERE `ФИО врача` LIKE '%" + tbSearch.Text + "%' " +
-                      "OR Должность LIKE '%" + tbSearch.Text + "%' " +
-                      "OR Специализация LIKE '%" + tbSearch.Text + "%'",connection.connect());
+            Personal search = new Personal();
+            search.searchPersonal(tbSearch.Text);
             DataTable dtSearch = new DataTable();
-            daSearch.Fill(dtSearch);
+            search.searchPersonal(tbSearch.Text).Fill(dtSearch);
             dataGridViewUsr.DataSource = dtSearch;
         }
 

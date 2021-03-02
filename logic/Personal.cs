@@ -33,5 +33,16 @@ namespace MedIS.logic
             cDel.ExecuteNonQuery();
             return cDel;
         }
+
+        public MySqlDataAdapter searchPersonal(string tbSearch)
+        {
+            Connection connection = new Connection();
+            MySqlDataAdapter daSearch = new MySqlDataAdapter("SELECT `ФИО врача`, Должность, Специализация, Логин FROM персонал " +
+                      "WHERE `ФИО врача` LIKE '%" + tbSearch + "%' " +
+                      "OR Должность LIKE '%" + tbSearch + "%' " +
+                      "OR Специализация LIKE '%" + tbSearch + "%' " +
+                      "OR Логин LIKE '%" + tbSearch + "%'", connection.connect());
+            return daSearch;
+        }
     }
 }
