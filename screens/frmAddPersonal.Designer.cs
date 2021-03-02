@@ -238,14 +238,14 @@ namespace MedIS.screens
         private System.Windows.Forms.Label labelFullName;
         private System.Windows.Forms.Label labelPos;
         private System.Windows.Forms.Label labelSpec;
-        private System.Windows.Forms.TextBox tbFullName;
-        private System.Windows.Forms.TextBox tbPos;
-        private System.Windows.Forms.TextBox tbSpec;
         private System.Windows.Forms.Button bttnCancel;
         private System.Windows.Forms.Button bttnAccept;
         private System.Windows.Forms.Label labelNotePos;
-        private System.Windows.Forms.TextBox tbNotePos;
         private System.Windows.Forms.Label labelNoteCpec;
-        private System.Windows.Forms.TextBox tbNoteCpec;
+        public System.Windows.Forms.TextBox tbFullName;
+        public System.Windows.Forms.TextBox tbPos;
+        public System.Windows.Forms.TextBox tbSpec;
+        public System.Windows.Forms.TextBox tbNotePos;
+        public System.Windows.Forms.TextBox tbNoteCpec;
     }
 }

@@ -28,30 +28,38 @@ namespace MedIS
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminMenu));
             this.panelTop = new System.Windows.Forms.Panel();
             this.labelMenu = new System.Windows.Forms.Label();
             this.dataGridViewUsr = new System.Windows.Forms.DataGridView();
             this.panelBottom = new System.Windows.Forms.Panel();
-            this.bttnAddPerson = new System.Windows.Forms.Button();
             this.bttnImport = new System.Windows.Forms.Button();
             this.bttnExport = new System.Windows.Forms.Button();
             this.labelNotePos = new System.Windows.Forms.Label();
-            this.labelSpec = new System.Windows.Forms.Label();
+            this.labelNoteSpec = new System.Windows.Forms.Label();
             this.labelTxtPos = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTxtSpec = new System.Windows.Forms.Label();
             this.saveFile = new System.Windows.Forms.SaveFileDialog();
             this.openFile = new System.Windows.Forms.OpenFileDialog();
+            this.bttnChange = new System.Windows.Forms.Label();
+            this.bttnDelete = new System.Windows.Forms.Label();
+            this.bttnAddPerson = new System.Windows.Forms.Label();
+            this.labelSearch = new System.Windows.Forms.Label();
+            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.bttnClose = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bttnClose)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.Salmon;
+            this.panelTop.Controls.Add(this.bttnClose);
             this.panelTop.Controls.Add(this.labelMenu);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.ForeColor = System.Drawing.Color.Salmon;
@@ -73,40 +81,45 @@ namespace MedIS
             // 
             // dataGridViewUsr
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewUsr.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewUsr.AllowDrop = true;
+            this.dataGridViewUsr.AllowUserToAddRows = false;
+            this.dataGridViewUsr.AllowUserToDeleteRows = false;
+            this.dataGridViewUsr.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewUsr.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewUsr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewUsr.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUsr.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewUsr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewUsr.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewUsr.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewUsr.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridViewUsr.Location = new System.Drawing.Point(12, 31);
             this.dataGridViewUsr.Name = "dataGridViewUsr";
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewUsr.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewUsr.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewUsr.Size = new System.Drawing.Size(742, 579);
             this.dataGridViewUsr.TabIndex = 1;
+            this.dataGridViewUsr.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsr_CellClick);
             // 
             // panelBottom
             // 
@@ -117,23 +130,6 @@ namespace MedIS
             this.panelBottom.Size = new System.Drawing.Size(766, 2);
             this.panelBottom.TabIndex = 2;
             // 
-            // bttnAddPerson
-            // 
-            this.bttnAddPerson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
-            this.bttnAddPerson.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttnAddPerson.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
-            this.bttnAddPerson.FlatAppearance.BorderSize = 0;
-            this.bttnAddPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttnAddPerson.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bttnAddPerson.ForeColor = System.Drawing.Color.Black;
-            this.bttnAddPerson.Location = new System.Drawing.Point(12, 665);
-            this.bttnAddPerson.Name = "bttnAddPerson";
-            this.bttnAddPerson.Size = new System.Drawing.Size(179, 30);
-            this.bttnAddPerson.TabIndex = 3;
-            this.bttnAddPerson.Text = "Добавить работника";
-            this.bttnAddPerson.UseVisualStyleBackColor = false;
-            this.bttnAddPerson.Click += new System.EventHandler(this.bttnAddPerson_Click);
-            // 
             // bttnImport
             // 
             this.bttnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
@@ -143,7 +139,8 @@ namespace MedIS
             this.bttnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnImport.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.bttnImport.ForeColor = System.Drawing.Color.Black;
-            this.bttnImport.Location = new System.Drawing.Point(197, 665);
+            this.bttnImport.Location = new System.Drawing.Point(575, 658);
+            this.bttnImport.Margin = new System.Windows.Forms.Padding(0);
             this.bttnImport.Name = "bttnImport";
             this.bttnImport.Size = new System.Drawing.Size(179, 30);
             this.bttnImport.TabIndex = 4;
@@ -160,7 +157,7 @@ namespace MedIS
             this.bttnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnExport.Font = new System.Drawing.Font("Bahnschrift", 11F);
             this.bttnExport.ForeColor = System.Drawing.Color.Black;
-            this.bttnExport.Location = new System.Drawing.Point(382, 666);
+            this.bttnExport.Location = new System.Drawing.Point(575, 694);
             this.bttnExport.Name = "bttnExport";
             this.bttnExport.Size = new System.Drawing.Size(179, 30);
             this.bttnExport.TabIndex = 5;
@@ -179,16 +176,16 @@ namespace MedIS
             this.labelNotePos.TabIndex = 6;
             this.labelNotePos.Text = "Примечание должности:";
             // 
-            // labelSpec
+            // labelNoteSpec
             // 
-            this.labelSpec.AutoSize = true;
-            this.labelSpec.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.labelSpec.ForeColor = System.Drawing.Color.Black;
-            this.labelSpec.Location = new System.Drawing.Point(12, 632);
-            this.labelSpec.Name = "labelSpec";
-            this.labelSpec.Size = new System.Drawing.Size(227, 19);
-            this.labelSpec.TabIndex = 7;
-            this.labelSpec.Text = "Примечание специализации:";
+            this.labelNoteSpec.AutoSize = true;
+            this.labelNoteSpec.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.labelNoteSpec.ForeColor = System.Drawing.Color.Black;
+            this.labelNoteSpec.Location = new System.Drawing.Point(12, 632);
+            this.labelNoteSpec.Name = "labelNoteSpec";
+            this.labelNoteSpec.Size = new System.Drawing.Size(227, 19);
+            this.labelNoteSpec.TabIndex = 7;
+            this.labelNoteSpec.Text = "Примечание специализации:";
             // 
             // labelTxtPos
             // 
@@ -197,38 +194,112 @@ namespace MedIS
             this.labelTxtPos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
             this.labelTxtPos.Location = new System.Drawing.Point(209, 613);
             this.labelTxtPos.Name = "labelTxtPos";
-            this.labelTxtPos.Size = new System.Drawing.Size(27, 19);
+            this.labelTxtPos.Size = new System.Drawing.Size(0, 19);
             this.labelTxtPos.TabIndex = 8;
-            this.labelTxtPos.Text = "txt";
             // 
-            // label1
+            // labelTxtSpec
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.label1.Location = new System.Drawing.Point(245, 632);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 19);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "txt";
+            this.labelTxtSpec.AutoSize = true;
+            this.labelTxtSpec.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
+            this.labelTxtSpec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.labelTxtSpec.Location = new System.Drawing.Point(245, 632);
+            this.labelTxtSpec.Name = "labelTxtSpec";
+            this.labelTxtSpec.Size = new System.Drawing.Size(0, 19);
+            this.labelTxtSpec.TabIndex = 9;
             // 
             // openFile
             // 
             this.openFile.FileName = "openFileDialog1";
+            // 
+            // bttnChange
+            // 
+            this.bttnChange.AutoSize = true;
+            this.bttnChange.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnChange.Font = new System.Drawing.Font("Bahnschrift SemiLight", 10F);
+            this.bttnChange.ForeColor = System.Drawing.Color.Black;
+            this.bttnChange.Location = new System.Drawing.Point(16, 695);
+            this.bttnChange.Name = "bttnChange";
+            this.bttnChange.Size = new System.Drawing.Size(210, 17);
+            this.bttnChange.TabIndex = 10;
+            this.bttnChange.Text = "Изменить данные о работнике";
+            this.bttnChange.Click += new System.EventHandler(this.bttnChange_Click);
+            // 
+            // bttnDelete
+            // 
+            this.bttnDelete.AutoSize = true;
+            this.bttnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnDelete.Font = new System.Drawing.Font("Bahnschrift SemiLight", 10F);
+            this.bttnDelete.ForeColor = System.Drawing.Color.Black;
+            this.bttnDelete.Location = new System.Drawing.Point(16, 725);
+            this.bttnDelete.Name = "bttnDelete";
+            this.bttnDelete.Size = new System.Drawing.Size(220, 17);
+            this.bttnDelete.TabIndex = 11;
+            this.bttnDelete.Text = "Удалить работника учреждения";
+            this.bttnDelete.Click += new System.EventHandler(this.bttnDelete_Click);
+            // 
+            // bttnAddPerson
+            // 
+            this.bttnAddPerson.AutoSize = true;
+            this.bttnAddPerson.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnAddPerson.Font = new System.Drawing.Font("Bahnschrift SemiLight", 10F);
+            this.bttnAddPerson.ForeColor = System.Drawing.Color.Black;
+            this.bttnAddPerson.Location = new System.Drawing.Point(16, 665);
+            this.bttnAddPerson.Name = "bttnAddPerson";
+            this.bttnAddPerson.Size = new System.Drawing.Size(142, 17);
+            this.bttnAddPerson.TabIndex = 12;
+            this.bttnAddPerson.Text = "Добавить работника";
+            this.bttnAddPerson.Click += new System.EventHandler(this.bttnAddPerson_Click);
+            // 
+            // labelSearch
+            // 
+            this.labelSearch.AutoSize = true;
+            this.labelSearch.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.labelSearch.ForeColor = System.Drawing.Color.Black;
+            this.labelSearch.Location = new System.Drawing.Point(519, 728);
+            this.labelSearch.Name = "labelSearch";
+            this.labelSearch.Size = new System.Drawing.Size(54, 19);
+            this.labelSearch.TabIndex = 13;
+            this.labelSearch.Text = "Поиск";
+            // 
+            // tbSearch
+            // 
+            this.tbSearch.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8.25F);
+            this.tbSearch.Location = new System.Drawing.Point(575, 727);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(179, 21);
+            this.tbSearch.TabIndex = 17;
+            this.tbSearch.TextChanged += new System.EventHandler(this.tbNotePos_TextChanged);
+            // 
+            // bttnClose
+            // 
+            this.bttnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnClose.Image = ((System.Drawing.Image)(resources.GetObject("bttnClose.Image")));
+            this.bttnClose.Location = new System.Drawing.Point(734, 2);
+            this.bttnClose.Name = "bttnClose";
+            this.bttnClose.Size = new System.Drawing.Size(20, 20);
+            this.bttnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bttnClose.TabIndex = 18;
+            this.bttnClose.TabStop = false;
+            this.bttnClose.Click += new System.EventHandler(this.bttnClose_Click);
             // 
             // frmAdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(766, 707);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(766, 752);
+            this.Controls.Add(this.tbSearch);
+            this.Controls.Add(this.labelSearch);
+            this.Controls.Add(this.bttnAddPerson);
+            this.Controls.Add(this.bttnDelete);
+            this.Controls.Add(this.bttnChange);
+            this.Controls.Add(this.labelTxtSpec);
             this.Controls.Add(this.labelTxtPos);
-            this.Controls.Add(this.labelSpec);
+            this.Controls.Add(this.labelNoteSpec);
             this.Controls.Add(this.labelNotePos);
             this.Controls.Add(this.bttnExport);
             this.Controls.Add(this.bttnImport);
-            this.Controls.Add(this.bttnAddPerson);
             this.Controls.Add(this.panelBottom);
             this.Controls.Add(this.dataGridViewUsr);
             this.Controls.Add(this.panelTop);
@@ -241,6 +312,7 @@ namespace MedIS
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bttnClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,15 +324,20 @@ namespace MedIS
         private System.Windows.Forms.DataGridView dataGridViewUsr;
         private System.Windows.Forms.Label labelMenu;
         private System.Windows.Forms.Panel panelBottom;
-        private System.Windows.Forms.Button bttnAddPerson;
         private System.Windows.Forms.Button bttnImport;
         private System.Windows.Forms.Button bttnExport;
         private System.Windows.Forms.Label labelNotePos;
-        private System.Windows.Forms.Label labelSpec;
+        private System.Windows.Forms.Label labelNoteSpec;
         private System.Windows.Forms.Label labelTxtPos;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTxtSpec;
         private System.Windows.Forms.SaveFileDialog saveFile;
         private System.Windows.Forms.OpenFileDialog openFile;
+        private System.Windows.Forms.Label bttnChange;
+        private System.Windows.Forms.Label bttnDelete;
+        private System.Windows.Forms.Label bttnAddPerson;
+        private System.Windows.Forms.Label labelSearch;
+        public System.Windows.Forms.TextBox tbSearch;
+        private System.Windows.Forms.PictureBox bttnClose;
     }
 }
 
