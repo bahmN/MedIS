@@ -33,17 +33,17 @@ namespace MedIS.screens
             string FullName = tbFullName.Text;
             string Position = tbPos.Text;
             string Specialization = tbSpec.Text;
-            string NotePosition = tbNotePos.Text;
-            string NoteSpecialization = tbNoteCpec.Text;
-
+            string Note = tbNote.Text;
+            string Login = tbLogin.Text;
+            string Password = Hashing.HashPassword(tbPassword.Text);
             if (addOrChange == true) {
                 // Выполнение записи данных в БД
-                personal.addPersonal(FullName, Position, Specialization, NotePosition, NoteSpecialization);
+                personal.addPersonal(FullName.Trim(), Position.Trim(), Specialization.Trim(), Note.Trim(), Login.Trim(), Password.Trim());
 
                 Close();
             }
-            else if(addOrChange == false){
-                personal.changePersonal(PK, FullName, Position, Specialization, NotePosition, NoteSpecialization);
+            else if (addOrChange == false) {
+                personal.changePersonal(PK, FullName.Trim(), Position.Trim(), Specialization.Trim(), Note.Trim());
                 Close();
             }
         }

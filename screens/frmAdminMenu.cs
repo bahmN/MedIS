@@ -23,10 +23,10 @@ namespace MedIS
             dataGridViewUsr.DataSource = dtShow;
             dataGridViewUsr.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Column full width
             dataGridViewUsr.RowHeadersVisible = false; // Hide the display of the left column
-            dataGridViewUsr.AllowUserToAddRows = false;// Hide the display of the bottom column
-            dataGridViewUsr.Columns[0].Visible = false;
-            dataGridViewUsr.Columns[3].Visible = false;
-            dataGridViewUsr.Columns[5].Visible = false;
+            dataGridViewUsr.AllowUserToAddRows = false; // Hide the display of the bottom column
+            dataGridViewUsr.Columns[0].Visible = false; //Скрыть колонку с номером врача
+            dataGridViewUsr.Columns[4].Visible = false; //Скрыть колонку с Примечанием
+            dataGridViewUsr.Columns[6].Visible = false; //Скрыть колонку с паролем
         }
 
         // Добавление персонала
@@ -45,9 +45,8 @@ namespace MedIS
             fAP.addOrChange = false;
             fAP.tbFullName.Text = dataGridViewUsr.SelectedRows[0].Cells[1].Value.ToString();
             fAP.tbPos.Text = dataGridViewUsr.SelectedRows[0].Cells[2].Value.ToString();
-            fAP.tbNotePos.Text = dataGridViewUsr.SelectedRows[0].Cells[3].Value.ToString();
+            fAP.tbNote.Text = dataGridViewUsr.SelectedRows[0].Cells[3].Value.ToString();
             fAP.tbSpec.Text = dataGridViewUsr.SelectedRows[0].Cells[4].Value.ToString();
-            fAP.tbNoteCpec.Text = dataGridViewUsr.SelectedRows[0].Cells[5].Value.ToString();
             fAP.ShowDialog();
         }
 
@@ -94,8 +93,7 @@ namespace MedIS
             try {
                 dataGridViewUsr.Rows[e.RowIndex].Selected = true;
 
-                labelTxtPos.Text = dataGridViewUsr.SelectedRows[0].Cells[3].Value.ToString(); // Отобразить в label описание должности
-                labelTxtSpec.Text = dataGridViewUsr.SelectedRows[0].Cells[5].Value.ToString(); // Отобразить в label описание специализации
+                labelTxtNote.Text = dataGridViewUsr.SelectedRows[0].Cells[4].Value.ToString(); // Отобразить примечание в label
             }
             catch { }
         }

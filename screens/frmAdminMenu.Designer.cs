@@ -28,21 +28,20 @@ namespace MedIS
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminMenu));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminMenu));
             this.panelTop = new System.Windows.Forms.Panel();
+            this.bttnClose = new System.Windows.Forms.PictureBox();
             this.labelMenu = new System.Windows.Forms.Label();
             this.dataGridViewUsr = new System.Windows.Forms.DataGridView();
             this.panelBottom = new System.Windows.Forms.Panel();
             this.bttnImport = new System.Windows.Forms.Button();
             this.bttnExport = new System.Windows.Forms.Button();
-            this.labelNotePos = new System.Windows.Forms.Label();
-            this.labelNoteSpec = new System.Windows.Forms.Label();
-            this.labelTxtPos = new System.Windows.Forms.Label();
-            this.labelTxtSpec = new System.Windows.Forms.Label();
+            this.labelNote = new System.Windows.Forms.Label();
+            this.labelTxtNote = new System.Windows.Forms.Label();
             this.saveFile = new System.Windows.Forms.SaveFileDialog();
             this.openFile = new System.Windows.Forms.OpenFileDialog();
             this.bttnChange = new System.Windows.Forms.Label();
@@ -50,10 +49,9 @@ namespace MedIS
             this.bttnAddPerson = new System.Windows.Forms.Label();
             this.labelSearch = new System.Windows.Forms.Label();
             this.tbSearch = new System.Windows.Forms.TextBox();
-            this.bttnClose = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bttnClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsr)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTop
@@ -67,6 +65,18 @@ namespace MedIS
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(766, 25);
             this.panelTop.TabIndex = 0;
+            // 
+            // bttnClose
+            // 
+            this.bttnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnClose.Image = ((System.Drawing.Image)(resources.GetObject("bttnClose.Image")));
+            this.bttnClose.Location = new System.Drawing.Point(734, 2);
+            this.bttnClose.Name = "bttnClose";
+            this.bttnClose.Size = new System.Drawing.Size(20, 20);
+            this.bttnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bttnClose.TabIndex = 18;
+            this.bttnClose.TabStop = false;
+            this.bttnClose.Click += new System.EventHandler(this.bttnClose_Click);
             // 
             // labelMenu
             // 
@@ -165,47 +175,26 @@ namespace MedIS
             this.bttnExport.UseVisualStyleBackColor = false;
             this.bttnExport.Click += new System.EventHandler(this.bttnExport_Click);
             // 
-            // labelNotePos
+            // labelNote
             // 
-            this.labelNotePos.AutoSize = true;
-            this.labelNotePos.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.labelNotePos.ForeColor = System.Drawing.Color.Black;
-            this.labelNotePos.Location = new System.Drawing.Point(12, 613);
-            this.labelNotePos.Name = "labelNotePos";
-            this.labelNotePos.Size = new System.Drawing.Size(191, 19);
-            this.labelNotePos.TabIndex = 6;
-            this.labelNotePos.Text = "Примечание должности:";
+            this.labelNote.AutoSize = true;
+            this.labelNote.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.labelNote.ForeColor = System.Drawing.Color.Black;
+            this.labelNote.Location = new System.Drawing.Point(12, 622);
+            this.labelNote.Name = "labelNote";
+            this.labelNote.Size = new System.Drawing.Size(106, 19);
+            this.labelNote.TabIndex = 6;
+            this.labelNote.Text = "Примечание:";
             // 
-            // labelNoteSpec
+            // labelTxtNote
             // 
-            this.labelNoteSpec.AutoSize = true;
-            this.labelNoteSpec.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.labelNoteSpec.ForeColor = System.Drawing.Color.Black;
-            this.labelNoteSpec.Location = new System.Drawing.Point(12, 632);
-            this.labelNoteSpec.Name = "labelNoteSpec";
-            this.labelNoteSpec.Size = new System.Drawing.Size(227, 19);
-            this.labelNoteSpec.TabIndex = 7;
-            this.labelNoteSpec.Text = "Примечание специализации:";
-            // 
-            // labelTxtPos
-            // 
-            this.labelTxtPos.AutoSize = true;
-            this.labelTxtPos.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
-            this.labelTxtPos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.labelTxtPos.Location = new System.Drawing.Point(209, 613);
-            this.labelTxtPos.Name = "labelTxtPos";
-            this.labelTxtPos.Size = new System.Drawing.Size(0, 19);
-            this.labelTxtPos.TabIndex = 8;
-            // 
-            // labelTxtSpec
-            // 
-            this.labelTxtSpec.AutoSize = true;
-            this.labelTxtSpec.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
-            this.labelTxtSpec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.labelTxtSpec.Location = new System.Drawing.Point(245, 632);
-            this.labelTxtSpec.Name = "labelTxtSpec";
-            this.labelTxtSpec.Size = new System.Drawing.Size(0, 19);
-            this.labelTxtSpec.TabIndex = 9;
+            this.labelTxtNote.AutoSize = true;
+            this.labelTxtNote.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
+            this.labelTxtNote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.labelTxtNote.Location = new System.Drawing.Point(124, 622);
+            this.labelTxtNote.Name = "labelTxtNote";
+            this.labelTxtNote.Size = new System.Drawing.Size(0, 19);
+            this.labelTxtNote.TabIndex = 8;
             // 
             // openFile
             // 
@@ -271,18 +260,6 @@ namespace MedIS
             this.tbSearch.TabIndex = 17;
             this.tbSearch.TextChanged += new System.EventHandler(this.tbNotePos_TextChanged);
             // 
-            // bttnClose
-            // 
-            this.bttnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bttnClose.Image = ((System.Drawing.Image)(resources.GetObject("bttnClose.Image")));
-            this.bttnClose.Location = new System.Drawing.Point(734, 2);
-            this.bttnClose.Name = "bttnClose";
-            this.bttnClose.Size = new System.Drawing.Size(20, 20);
-            this.bttnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bttnClose.TabIndex = 18;
-            this.bttnClose.TabStop = false;
-            this.bttnClose.Click += new System.EventHandler(this.bttnClose_Click);
-            // 
             // frmAdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,10 +271,8 @@ namespace MedIS
             this.Controls.Add(this.bttnAddPerson);
             this.Controls.Add(this.bttnDelete);
             this.Controls.Add(this.bttnChange);
-            this.Controls.Add(this.labelTxtSpec);
-            this.Controls.Add(this.labelTxtPos);
-            this.Controls.Add(this.labelNoteSpec);
-            this.Controls.Add(this.labelNotePos);
+            this.Controls.Add(this.labelTxtNote);
+            this.Controls.Add(this.labelNote);
             this.Controls.Add(this.bttnExport);
             this.Controls.Add(this.bttnImport);
             this.Controls.Add(this.panelBottom);
@@ -311,8 +286,8 @@ namespace MedIS
             this.Load += new System.EventHandler(this.frmAdminMenu_Load);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bttnClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,10 +301,8 @@ namespace MedIS
         private System.Windows.Forms.Panel panelBottom;
         private System.Windows.Forms.Button bttnImport;
         private System.Windows.Forms.Button bttnExport;
-        private System.Windows.Forms.Label labelNotePos;
-        private System.Windows.Forms.Label labelNoteSpec;
-        private System.Windows.Forms.Label labelTxtPos;
-        private System.Windows.Forms.Label labelTxtSpec;
+        private System.Windows.Forms.Label labelNote;
+        private System.Windows.Forms.Label labelTxtNote;
         private System.Windows.Forms.SaveFileDialog saveFile;
         private System.Windows.Forms.OpenFileDialog openFile;
         private System.Windows.Forms.Label bttnChange;

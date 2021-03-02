@@ -95,6 +95,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="logic\Hashing.cs" />
     <Compile Include="logic\Personal.cs" />
     <Compile Include="logic\Backup.cs" />
     <Compile Include="screens\frmAddPersonal.cs">

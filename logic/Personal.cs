@@ -6,21 +6,21 @@ namespace MedIS.logic
     class Personal
     {
 
-        public MySqlCommand addPersonal(string FN, string Pos, string Spec, string NotePos, string NoteSpec)
+        public MySqlCommand addPersonal(string FN, string Pos, string Spec, string Note, string Login, string Password)
         {
             Connection con = new Connection();
-            MySqlCommand cAdd = new MySqlCommand("INSERT INTO персонал(`ФИО врача`, Должность,`Примечание о должности`, Специализация, `Примечание о специализации`)" +
-                " VALUES ('" + FN + "', '" + Pos + "', '" + NotePos + "', '" + Spec + "', '" + NoteSpec + "')", con.connect());
+            MySqlCommand cAdd = new MySqlCommand("INSERT INTO персонал(`ФИО врача`, Должность, Специализация, Примечание, Логин, Пароль)" +
+                " VALUES ('" + FN + "', '" + Pos + "', '" + Spec + "', '" + Note + "', '" + Login + "', '" + Password + "')", con.connect());
             cAdd.ExecuteNonQuery();
 
             return cAdd;
         }
 
-        public MySqlCommand changePersonal(string PK, string FN, string Pos, string Spec, string NotePos, string NoteSpec)
+        public MySqlCommand changePersonal(string PK, string FN, string Pos, string Spec, string Note)
         {
             Connection con = new Connection();
-            MySqlCommand cChng = new MySqlCommand("UPDATE персонал SET `ФИО Врача`= '" + FN + "', Должность= '" + Pos + "', `Примечание о должности`= '" + NotePos + "'" +
-                ", Специализация= '" + Spec + "', `Примечание о специализации`= '" + NoteSpec + "' WHERE `Номер врача`= '" + PK + "'", con.connect());
+            MySqlCommand cChng = new MySqlCommand("UPDATE персонал SET `ФИО Врача`= '" + FN + "', Должность= '" + Pos + "', Примечание= '" + Note + "'" +
+                ", Специализация= '" + Spec + "' WHERE `Номер врача`= '" + PK + "'", con.connect());
             cChng.ExecuteNonQuery();
 
             return cChng;
