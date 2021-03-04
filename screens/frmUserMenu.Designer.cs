@@ -29,11 +29,16 @@ namespace MedIS.screens
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserMenu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTop = new System.Windows.Forms.Panel();
             this.bttnClose = new System.Windows.Forms.PictureBox();
             this.labelMenu = new System.Windows.Forms.Label();
@@ -58,10 +63,26 @@ namespace MedIS.screens
             this.labelTxtPolis = new System.Windows.Forms.Label();
             this.labelPolis = new System.Windows.Forms.Label();
             this.bttnCloseRight = new System.Windows.Forms.PictureBox();
+            this.dataGridViewAppointment = new System.Windows.Forms.DataGridView();
+            this.labelHeaderAppoinment = new System.Windows.Forms.Label();
+            this.bttnAddAppointment = new System.Windows.Forms.Button();
+            this.labelTxtNote = new System.Windows.Forms.Label();
+            this.labelNote = new System.Windows.Forms.Label();
+            this.labelTxtDoc = new System.Windows.Forms.Label();
+            this.labelDoc = new System.Windows.Forms.Label();
+            this.bttnAddResults = new System.Windows.Forms.Button();
+            this.labelTxtResult = new System.Windows.Forms.Label();
+            this.labelResult = new System.Windows.Forms.Label();
+            this.labelTxtDiagnosis = new System.Windows.Forms.Label();
+            this.labelDiagnosis = new System.Windows.Forms.Label();
+            this.labelTxtDiagnosisNote = new System.Windows.Forms.Label();
+            this.labelDiagnosisNote = new System.Windows.Forms.Label();
+            this.bttnAddResultDiagnosis = new System.Windows.Forms.Label();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bttnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bttnCloseRight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointment)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTop
@@ -94,11 +115,11 @@ namespace MedIS.screens
             this.labelMenu.AutoSize = true;
             this.labelMenu.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMenu.ForeColor = System.Drawing.Color.Black;
-            this.labelMenu.Location = new System.Drawing.Point(492, 1);
+            this.labelMenu.Location = new System.Drawing.Point(543, 1);
             this.labelMenu.Name = "labelMenu";
-            this.labelMenu.Size = new System.Drawing.Size(188, 23);
+            this.labelMenu.Size = new System.Drawing.Size(126, 23);
             this.labelMenu.TabIndex = 19;
-            this.labelMenu.Text = "Панель-меню врача";
+            this.labelMenu.Text = "Регистратура";
             // 
             // dataGridViewPat
             // 
@@ -106,46 +127,46 @@ namespace MedIS.screens
             this.dataGridViewPat.AllowUserToAddRows = false;
             this.dataGridViewPat.AllowUserToDeleteRows = false;
             this.dataGridViewPat.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewPat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewPat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewPat.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Bahnschrift", 8.25F);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewPat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewPat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewPat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Bahnschrift", 8.25F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewPat.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift", 8.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewPat.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewPat.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridViewPat.Location = new System.Drawing.Point(12, 31);
             this.dataGridViewPat.Name = "dataGridViewPat";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Bahnschrift", 8.25F);
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewPat.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewPat.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift", 8.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewPat.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewPat.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewPat.Size = new System.Drawing.Size(835, 619);
             this.dataGridViewPat.TabIndex = 2;
             this.dataGridViewPat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPat_CellClick);
@@ -222,7 +243,7 @@ namespace MedIS.screens
             // tbSearch
             // 
             this.tbSearch.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8.25F);
-            this.tbSearch.Location = new System.Drawing.Point(719, 669);
+            this.tbSearch.Location = new System.Drawing.Point(719, 673);
             this.tbSearch.Margin = new System.Windows.Forms.Padding(2);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(128, 21);
@@ -234,7 +255,7 @@ namespace MedIS.screens
             this.labelSearch.AutoSize = true;
             this.labelSearch.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.labelSearch.ForeColor = System.Drawing.Color.Black;
-            this.labelSearch.Location = new System.Drawing.Point(663, 670);
+            this.labelSearch.Location = new System.Drawing.Point(663, 675);
             this.labelSearch.Name = "labelSearch";
             this.labelSearch.Size = new System.Drawing.Size(54, 19);
             this.labelSearch.TabIndex = 19;
@@ -245,7 +266,7 @@ namespace MedIS.screens
             this.labelTxtFN.AutoSize = true;
             this.labelTxtFN.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
             this.labelTxtFN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.labelTxtFN.Location = new System.Drawing.Point(880, 115);
+            this.labelTxtFN.Location = new System.Drawing.Point(869, 115);
             this.labelTxtFN.Name = "labelTxtFN";
             this.labelTxtFN.Size = new System.Drawing.Size(37, 19);
             this.labelTxtFN.TabIndex = 22;
@@ -256,7 +277,7 @@ namespace MedIS.screens
             this.labelFN.AutoSize = true;
             this.labelFN.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.labelFN.ForeColor = System.Drawing.Color.Black;
-            this.labelFN.Location = new System.Drawing.Point(880, 96);
+            this.labelFN.Location = new System.Drawing.Point(869, 96);
             this.labelFN.Name = "labelFN";
             this.labelFN.Size = new System.Drawing.Size(122, 19);
             this.labelFN.TabIndex = 21;
@@ -267,7 +288,7 @@ namespace MedIS.screens
             this.labelTxtDateBirth.AutoSize = true;
             this.labelTxtDateBirth.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
             this.labelTxtDateBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.labelTxtDateBirth.Location = new System.Drawing.Point(880, 153);
+            this.labelTxtDateBirth.Location = new System.Drawing.Point(869, 153);
             this.labelTxtDateBirth.Name = "labelTxtDateBirth";
             this.labelTxtDateBirth.Size = new System.Drawing.Size(37, 19);
             this.labelTxtDateBirth.TabIndex = 24;
@@ -278,7 +299,7 @@ namespace MedIS.screens
             this.labelDateBirth.AutoSize = true;
             this.labelDateBirth.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.labelDateBirth.ForeColor = System.Drawing.Color.Black;
-            this.labelDateBirth.Location = new System.Drawing.Point(880, 134);
+            this.labelDateBirth.Location = new System.Drawing.Point(869, 134);
             this.labelDateBirth.Name = "labelDateBirth";
             this.labelDateBirth.Size = new System.Drawing.Size(129, 19);
             this.labelDateBirth.TabIndex = 23;
@@ -289,7 +310,7 @@ namespace MedIS.screens
             this.labelTxtAdress.AutoSize = true;
             this.labelTxtAdress.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
             this.labelTxtAdress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.labelTxtAdress.Location = new System.Drawing.Point(880, 191);
+            this.labelTxtAdress.Location = new System.Drawing.Point(869, 191);
             this.labelTxtAdress.Name = "labelTxtAdress";
             this.labelTxtAdress.Size = new System.Drawing.Size(37, 19);
             this.labelTxtAdress.TabIndex = 26;
@@ -300,7 +321,7 @@ namespace MedIS.screens
             this.labelAdress.AutoSize = true;
             this.labelAdress.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.labelAdress.ForeColor = System.Drawing.Color.Black;
-            this.labelAdress.Location = new System.Drawing.Point(880, 172);
+            this.labelAdress.Location = new System.Drawing.Point(869, 172);
             this.labelAdress.Name = "labelAdress";
             this.labelAdress.Size = new System.Drawing.Size(59, 19);
             this.labelAdress.TabIndex = 25;
@@ -311,7 +332,7 @@ namespace MedIS.screens
             this.labelTxtPhone.AutoSize = true;
             this.labelTxtPhone.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
             this.labelTxtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.labelTxtPhone.Location = new System.Drawing.Point(880, 229);
+            this.labelTxtPhone.Location = new System.Drawing.Point(869, 229);
             this.labelTxtPhone.Name = "labelTxtPhone";
             this.labelTxtPhone.Size = new System.Drawing.Size(37, 19);
             this.labelTxtPhone.TabIndex = 28;
@@ -322,7 +343,7 @@ namespace MedIS.screens
             this.labelPhone.AutoSize = true;
             this.labelPhone.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.labelPhone.ForeColor = System.Drawing.Color.Black;
-            this.labelPhone.Location = new System.Drawing.Point(880, 210);
+            this.labelPhone.Location = new System.Drawing.Point(869, 210);
             this.labelPhone.Name = "labelPhone";
             this.labelPhone.Size = new System.Drawing.Size(76, 19);
             this.labelPhone.TabIndex = 27;
@@ -333,7 +354,7 @@ namespace MedIS.screens
             this.labelTxtPassport.AutoSize = true;
             this.labelTxtPassport.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
             this.labelTxtPassport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.labelTxtPassport.Location = new System.Drawing.Point(880, 267);
+            this.labelTxtPassport.Location = new System.Drawing.Point(869, 267);
             this.labelTxtPassport.MaximumSize = new System.Drawing.Size(325, 0);
             this.labelTxtPassport.Name = "labelTxtPassport";
             this.labelTxtPassport.Size = new System.Drawing.Size(37, 19);
@@ -345,7 +366,7 @@ namespace MedIS.screens
             this.labelPassport.AutoSize = true;
             this.labelPassport.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.labelPassport.ForeColor = System.Drawing.Color.Black;
-            this.labelPassport.Location = new System.Drawing.Point(880, 248);
+            this.labelPassport.Location = new System.Drawing.Point(869, 248);
             this.labelPassport.Name = "labelPassport";
             this.labelPassport.Size = new System.Drawing.Size(165, 19);
             this.labelPassport.TabIndex = 29;
@@ -356,7 +377,7 @@ namespace MedIS.screens
             this.labelTxtPolis.AutoSize = true;
             this.labelTxtPolis.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
             this.labelTxtPolis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            this.labelTxtPolis.Location = new System.Drawing.Point(880, 77);
+            this.labelTxtPolis.Location = new System.Drawing.Point(869, 77);
             this.labelTxtPolis.Name = "labelTxtPolis";
             this.labelTxtPolis.Size = new System.Drawing.Size(37, 19);
             this.labelTxtPolis.TabIndex = 32;
@@ -367,7 +388,7 @@ namespace MedIS.screens
             this.labelPolis.AutoSize = true;
             this.labelPolis.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.labelPolis.ForeColor = System.Drawing.Color.Black;
-            this.labelPolis.Location = new System.Drawing.Point(880, 58);
+            this.labelPolis.Location = new System.Drawing.Point(869, 58);
             this.labelPolis.Name = "labelPolis";
             this.labelPolis.Size = new System.Drawing.Size(59, 19);
             this.labelPolis.TabIndex = 31;
@@ -377,13 +398,229 @@ namespace MedIS.screens
             // 
             this.bttnCloseRight.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bttnCloseRight.Image = ((System.Drawing.Image)(resources.GetObject("bttnCloseRight.Image")));
-            this.bttnCloseRight.Location = new System.Drawing.Point(877, 31);
+            this.bttnCloseRight.Location = new System.Drawing.Point(864, 31);
             this.bttnCloseRight.Name = "bttnCloseRight";
-            this.bttnCloseRight.Size = new System.Drawing.Size(20, 20);
-            this.bttnCloseRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bttnCloseRight.Size = new System.Drawing.Size(42, 24);
+            this.bttnCloseRight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bttnCloseRight.TabIndex = 21;
             this.bttnCloseRight.TabStop = false;
             this.bttnCloseRight.Click += new System.EventHandler(this.bttnCloseRight_Click);
+            // 
+            // dataGridViewAppointment
+            // 
+            this.dataGridViewAppointment.AllowDrop = true;
+            this.dataGridViewAppointment.AllowUserToAddRows = false;
+            this.dataGridViewAppointment.AllowUserToDeleteRows = false;
+            this.dataGridViewAppointment.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewAppointment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewAppointment.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Bahnschrift", 8.25F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAppointment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewAppointment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift", 8.25F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewAppointment.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewAppointment.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dataGridViewAppointment.Location = new System.Drawing.Point(869, 331);
+            this.dataGridViewAppointment.Name = "dataGridViewAppointment";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Bahnschrift", 8.25F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAppointment.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewAppointment.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewAppointment.Size = new System.Drawing.Size(337, 167);
+            this.dataGridViewAppointment.TabIndex = 33;
+            this.dataGridViewAppointment.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAppointment_CellClick);
+            // 
+            // labelHeaderAppoinment
+            // 
+            this.labelHeaderAppoinment.AutoSize = true;
+            this.labelHeaderAppoinment.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.labelHeaderAppoinment.ForeColor = System.Drawing.Color.Black;
+            this.labelHeaderAppoinment.Location = new System.Drawing.Point(976, 309);
+            this.labelHeaderAppoinment.Name = "labelHeaderAppoinment";
+            this.labelHeaderAppoinment.Size = new System.Drawing.Size(122, 19);
+            this.labelHeaderAppoinment.TabIndex = 34;
+            this.labelHeaderAppoinment.Text = "Записи к врачу";
+            // 
+            // bttnAddAppointment
+            // 
+            this.bttnAddAppointment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            this.bttnAddAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnAddAppointment.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            this.bttnAddAppointment.FlatAppearance.BorderSize = 0;
+            this.bttnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnAddAppointment.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bttnAddAppointment.ForeColor = System.Drawing.Color.Black;
+            this.bttnAddAppointment.Location = new System.Drawing.Point(869, 664);
+            this.bttnAddAppointment.Name = "bttnAddAppointment";
+            this.bttnAddAppointment.Size = new System.Drawing.Size(160, 30);
+            this.bttnAddAppointment.TabIndex = 35;
+            this.bttnAddAppointment.Text = "Записать";
+            this.bttnAddAppointment.UseVisualStyleBackColor = false;
+            this.bttnAddAppointment.Click += new System.EventHandler(this.bttnAddAppointment_Click);
+            // 
+            // labelTxtNote
+            // 
+            this.labelTxtNote.AutoSize = true;
+            this.labelTxtNote.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
+            this.labelTxtNote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.labelTxtNote.Location = new System.Drawing.Point(976, 524);
+            this.labelTxtNote.MaximumSize = new System.Drawing.Size(65, 0);
+            this.labelTxtNote.Name = "labelTxtNote";
+            this.labelTxtNote.Size = new System.Drawing.Size(0, 19);
+            this.labelTxtNote.TabIndex = 40;
+            // 
+            // labelNote
+            // 
+            this.labelNote.AutoSize = true;
+            this.labelNote.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.labelNote.ForeColor = System.Drawing.Color.Black;
+            this.labelNote.Location = new System.Drawing.Point(869, 524);
+            this.labelNote.Name = "labelNote";
+            this.labelNote.Size = new System.Drawing.Size(106, 19);
+            this.labelNote.TabIndex = 39;
+            this.labelNote.Text = "Примечание:";
+            // 
+            // labelTxtDoc
+            // 
+            this.labelTxtDoc.AutoSize = true;
+            this.labelTxtDoc.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
+            this.labelTxtDoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.labelTxtDoc.Location = new System.Drawing.Point(976, 501);
+            this.labelTxtDoc.Name = "labelTxtDoc";
+            this.labelTxtDoc.Size = new System.Drawing.Size(0, 19);
+            this.labelTxtDoc.TabIndex = 38;
+            // 
+            // labelDoc
+            // 
+            this.labelDoc.AutoSize = true;
+            this.labelDoc.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.labelDoc.ForeColor = System.Drawing.Color.Black;
+            this.labelDoc.Location = new System.Drawing.Point(869, 501);
+            this.labelDoc.Name = "labelDoc";
+            this.labelDoc.Size = new System.Drawing.Size(50, 19);
+            this.labelDoc.TabIndex = 37;
+            this.labelDoc.Text = "Врач:";
+            // 
+            // bttnAddResults
+            // 
+            this.bttnAddResults.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            this.bttnAddResults.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnAddResults.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            this.bttnAddResults.FlatAppearance.BorderSize = 0;
+            this.bttnAddResults.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnAddResults.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bttnAddResults.ForeColor = System.Drawing.Color.Black;
+            this.bttnAddResults.Location = new System.Drawing.Point(1046, 664);
+            this.bttnAddResults.Name = "bttnAddResults";
+            this.bttnAddResults.Size = new System.Drawing.Size(160, 30);
+            this.bttnAddResults.TabIndex = 36;
+            this.bttnAddResults.Text = "Добавить диагноз";
+            this.bttnAddResults.UseVisualStyleBackColor = false;
+            this.bttnAddResults.Click += new System.EventHandler(this.bttnAddResults_Click);
+            // 
+            // labelTxtResult
+            // 
+            this.labelTxtResult.AutoSize = true;
+            this.labelTxtResult.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
+            this.labelTxtResult.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.labelTxtResult.Location = new System.Drawing.Point(976, 572);
+            this.labelTxtResult.MaximumSize = new System.Drawing.Size(150, 0);
+            this.labelTxtResult.Name = "labelTxtResult";
+            this.labelTxtResult.Size = new System.Drawing.Size(0, 19);
+            this.labelTxtResult.TabIndex = 44;
+            // 
+            // labelResult
+            // 
+            this.labelResult.AutoSize = true;
+            this.labelResult.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.labelResult.ForeColor = System.Drawing.Color.Black;
+            this.labelResult.Location = new System.Drawing.Point(869, 572);
+            this.labelResult.Name = "labelResult";
+            this.labelResult.Size = new System.Drawing.Size(87, 19);
+            this.labelResult.TabIndex = 43;
+            this.labelResult.Text = "Результат:";
+            // 
+            // labelTxtDiagnosis
+            // 
+            this.labelTxtDiagnosis.AutoSize = true;
+            this.labelTxtDiagnosis.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
+            this.labelTxtDiagnosis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.labelTxtDiagnosis.Location = new System.Drawing.Point(976, 549);
+            this.labelTxtDiagnosis.Name = "labelTxtDiagnosis";
+            this.labelTxtDiagnosis.Size = new System.Drawing.Size(0, 19);
+            this.labelTxtDiagnosis.TabIndex = 42;
+            // 
+            // labelDiagnosis
+            // 
+            this.labelDiagnosis.AutoSize = true;
+            this.labelDiagnosis.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.labelDiagnosis.ForeColor = System.Drawing.Color.Black;
+            this.labelDiagnosis.Location = new System.Drawing.Point(869, 549);
+            this.labelDiagnosis.Name = "labelDiagnosis";
+            this.labelDiagnosis.Size = new System.Drawing.Size(76, 19);
+            this.labelDiagnosis.TabIndex = 41;
+            this.labelDiagnosis.Text = "Диагноз:";
+            // 
+            // labelTxtDiagnosisNote
+            // 
+            this.labelTxtDiagnosisNote.AutoSize = true;
+            this.labelTxtDiagnosisNote.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
+            this.labelTxtDiagnosisNote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            this.labelTxtDiagnosisNote.Location = new System.Drawing.Point(976, 596);
+            this.labelTxtDiagnosisNote.MaximumSize = new System.Drawing.Size(100, 0);
+            this.labelTxtDiagnosisNote.Name = "labelTxtDiagnosisNote";
+            this.labelTxtDiagnosisNote.Size = new System.Drawing.Size(0, 19);
+            this.labelTxtDiagnosisNote.TabIndex = 46;
+            // 
+            // labelDiagnosisNote
+            // 
+            this.labelDiagnosisNote.AutoSize = true;
+            this.labelDiagnosisNote.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.labelDiagnosisNote.ForeColor = System.Drawing.Color.Black;
+            this.labelDiagnosisNote.Location = new System.Drawing.Point(869, 596);
+            this.labelDiagnosisNote.Name = "labelDiagnosisNote";
+            this.labelDiagnosisNote.Size = new System.Drawing.Size(106, 19);
+            this.labelDiagnosisNote.TabIndex = 45;
+            this.labelDiagnosisNote.Text = "Примечание:";
+            // 
+            // bttnAddResultDiagnosis
+            // 
+            this.bttnAddResultDiagnosis.AutoSize = true;
+            this.bttnAddResultDiagnosis.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttnAddResultDiagnosis.Font = new System.Drawing.Font("Bahnschrift", 9F);
+            this.bttnAddResultDiagnosis.ForeColor = System.Drawing.Color.Black;
+            this.bttnAddResultDiagnosis.Location = new System.Drawing.Point(1034, 636);
+            this.bttnAddResultDiagnosis.Name = "bttnAddResultDiagnosis";
+            this.bttnAddResultDiagnosis.Size = new System.Drawing.Size(175, 14);
+            this.bttnAddResultDiagnosis.TabIndex = 47;
+            this.bttnAddResultDiagnosis.Text = "Добавить результат диагноза";
+            this.bttnAddResultDiagnosis.Click += new System.EventHandler(this.bttnAddResultDiagnosis_Click);
             // 
             // frmUserMenu
             // 
@@ -391,6 +628,21 @@ namespace MedIS.screens
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1212, 706);
+            this.Controls.Add(this.bttnAddResultDiagnosis);
+            this.Controls.Add(this.labelTxtDiagnosisNote);
+            this.Controls.Add(this.labelDiagnosisNote);
+            this.Controls.Add(this.labelTxtResult);
+            this.Controls.Add(this.labelResult);
+            this.Controls.Add(this.labelTxtDiagnosis);
+            this.Controls.Add(this.labelDiagnosis);
+            this.Controls.Add(this.labelTxtNote);
+            this.Controls.Add(this.labelNote);
+            this.Controls.Add(this.labelTxtDoc);
+            this.Controls.Add(this.labelDoc);
+            this.Controls.Add(this.bttnAddResults);
+            this.Controls.Add(this.bttnAddAppointment);
+            this.Controls.Add(this.labelHeaderAppoinment);
+            this.Controls.Add(this.dataGridViewAppointment);
             this.Controls.Add(this.bttnCloseRight);
             this.Controls.Add(this.labelTxtPolis);
             this.Controls.Add(this.labelPolis);
@@ -424,6 +676,7 @@ namespace MedIS.screens
             ((System.ComponentModel.ISupportInitialize)(this.bttnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bttnCloseRight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointment)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,5 +708,20 @@ namespace MedIS.screens
         private System.Windows.Forms.Label labelTxtPolis;
         private System.Windows.Forms.Label labelPolis;
         private System.Windows.Forms.PictureBox bttnCloseRight;
+        private System.Windows.Forms.DataGridView dataGridViewAppointment;
+        private System.Windows.Forms.Label labelHeaderAppoinment;
+        private System.Windows.Forms.Button bttnAddAppointment;
+        private System.Windows.Forms.Label labelTxtNote;
+        private System.Windows.Forms.Label labelNote;
+        private System.Windows.Forms.Label labelTxtDoc;
+        private System.Windows.Forms.Label labelDoc;
+        private System.Windows.Forms.Button bttnAddResults;
+        private System.Windows.Forms.Label labelTxtResult;
+        private System.Windows.Forms.Label labelResult;
+        private System.Windows.Forms.Label labelTxtDiagnosis;
+        private System.Windows.Forms.Label labelDiagnosis;
+        private System.Windows.Forms.Label labelTxtDiagnosisNote;
+        private System.Windows.Forms.Label labelDiagnosisNote;
+        private System.Windows.Forms.Label bttnAddResultDiagnosis;
     }
 }
