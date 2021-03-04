@@ -39,14 +39,39 @@ namespace MedIS.screens
             string Login = tbLogin.Text;
             string Password = Hashing.HashPassword(tbPassword.Text);
             if (addOrChange == true) {
-                // Выполнение записи данных в БД
-                personal.addPersonal(FullName.Trim(), Position.Trim(), Specialization.Trim(), Note.Trim(), Login.Trim(), Password.Trim());
+                if(FullName != "") {
+                    if (Position != "") {
+                        if (Specialization != "") {
+                            if (Note != "") {
+                                if (Login != "") {
+                                    if (Password != "") {
+                                        personal.addPersonal(FullName.Trim(), Position.Trim(), Specialization.Trim(), Note.Trim(), Login.Trim(), Password.Trim());
 
-                Close();
+                                        Close();
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
             else if (addOrChange == false) {
-                personal.changePersonal(PK, FullName.Trim(), Position.Trim(), Specialization.Trim(), Note.Trim());
-                Close();
+                if (FullName != "") {
+                    if (Position != "") {
+                        if (Specialization != "") {
+                            if (Note != "") {
+                                if (Login != "") {
+                                    if (Password != "") {
+                                        personal.changePersonal(PK, FullName.Trim(), Position.Trim(), Specialization.Trim(), Note.Trim());
+                                        Close();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+               
             }
         }
     }

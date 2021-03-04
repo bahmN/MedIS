@@ -33,7 +33,7 @@ namespace MedIS.screens
                     fAM.ShowDialog();
                 }
                 else {
-                    MessageBox.Show("Неправильный логин или пароль");
+                    MessageBox.Show("Пожалуйста, проверьте правильность введенных данных", "Неправильный логин или пароль", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else {
@@ -46,7 +46,7 @@ namespace MedIS.screens
                     fUM.ShowDialog();
                 }
                 else {
-                    MessageBox.Show("Неправильный логин или пароль");
+                    MessageBox.Show("Пожалуйста, проверьте правильность введенных данных", "Неправильный логин или пароль", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

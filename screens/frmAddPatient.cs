@@ -30,14 +30,44 @@ namespace MedIS.screens
             string Phone = tbPhone.Text;
             string Passport = tbPassport.Text;
             if (addOrChange == true) {
-                Patient add = new Patient();                
-                add.addPatient(Polis, FN, DateBirth, Adress, Phone, Passport);
-                Close();
+                if(Polis != "") {
+                    if(FN != "") {
+                        if(DateBirth != "") {
+                            if(Adress != "") {
+                                if(Phone != "") {
+                                    if(Passport != "") {
+                                        Patient add = new Patient();
+                                        add.addPatient(Polis, FN, DateBirth, Adress, Phone, Passport);
+                                        Close();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                else {
+                    MessageBox.Show("Поля не могут быть пустыми", "Ошибка формата введенных данных", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else if(addOrChange == false){
-                Patient chng = new Patient();
-                chng.changePatient(Polis, FN, DateBirth, Adress, Phone, Passport, PK);
-                Close();
+                if (Polis != "") {
+                    if (FN != "") {
+                        if (DateBirth != "") {
+                            if (Adress != "") {
+                                if (Phone != "") {
+                                    if (Passport != "") {
+                                        Patient chng = new Patient();
+                                        chng.changePatient(Polis, FN, DateBirth, Adress, Phone, Passport, PK);
+                                        Close();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                else {
+                    MessageBox.Show("Поля не могут быть пустыми", "Ошибка формата введенных данных", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }                
             }
             
         }

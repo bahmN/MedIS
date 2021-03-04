@@ -22,24 +22,31 @@ namespace MedIS.screens
         private string PK;
         public bool addOrChange;
         public string NumPatient;
-        // Подтивердить
+        // Подтвердить
         private void bttnAccept_Click(object sender, EventArgs e)
         {
+            string name = tbDiagnosis.Text;
+            string result = cbResult.Text;
+            string note = tbNote.Text;
             if (addOrChange == true) {
-                string name = tbDiagnosis.Text;
-                string result = cbResult.Text;
-                string note = tbNote.Text;
-                Diagnosis add = new Diagnosis();
-                add.addDiagnosis(name, NumbAppoinment, result, note, NumPatient);
-                Close();
+                if (name != "") {
+                    Diagnosis add = new Diagnosis();
+                    add.addDiagnosis(name, NumbAppoinment, result, note, NumPatient);
+                    Close();
+                }
+                else {
+                    MessageBox.Show("Поле \"Диагноз\" не может быть пустым", "Ошибка формата введенных данных", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else if (addOrChange == false){
-                string name = tbDiagnosis.Text;
-                string result = cbResult.Text;
-                string note = tbNote.Text;
-                Diagnosis change = new Diagnosis();
-                change.changeDiagnosis(name, NumbAppoinment, result, note, PK);
-                Close();
+            else if (addOrChange == false) {
+                if (note != "") {
+                    Diagnosis change = new Diagnosis();
+                    change.changeDiagnosis(name, NumbAppoinment, result, note, PK);
+                    Close();
+                }
+                else {
+                    MessageBox.Show("Поле \"Результат\" не может быть пустым", "Ошибка формата введенных данных", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

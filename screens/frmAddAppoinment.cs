@@ -20,9 +20,23 @@ namespace MedIS.screens
             string ambul = cbAmbul.Text;
             string dispanser = cbDispancer.Text;
             string time = cbTime.Text;
-            DoctorAppointment add = new DoctorAppointment();
-            add.addAppoinment(numbPatient, numbDoctor.SelectedValue, date, ambul, dispanser, time);
-            Close();
+            if (numbDoctor != null) {
+                if (date != "") {
+                    if (ambul != "") {
+                        if (dispanser != "") {
+                            if (time != "") {
+                                DoctorAppointment add = new DoctorAppointment();
+                                add.addAppoinment(numbPatient, numbDoctor.SelectedValue, date, ambul, dispanser, time);
+                                Close();
+
+                            }
+                        }
+                    }
+                }
+            }
+            else {
+                MessageBox.Show("Поля не могут быть пустыми", "Ошибка формата введенных данных", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void frmAddAppoinment_Load(object sender, EventArgs e)

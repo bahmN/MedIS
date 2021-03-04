@@ -53,7 +53,7 @@ namespace MedIS.screens
             this.bttnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnCancel.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.bttnCancel.ForeColor = System.Drawing.Color.Black;
-            this.bttnCancel.Location = new System.Drawing.Point(214, 194);
+            this.bttnCancel.Location = new System.Drawing.Point(214, 167);
             this.bttnCancel.Name = "bttnCancel";
             this.bttnCancel.Size = new System.Drawing.Size(182, 30);
             this.bttnCancel.TabIndex = 54;
@@ -70,7 +70,7 @@ namespace MedIS.screens
             this.bttnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnAccept.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.bttnAccept.ForeColor = System.Drawing.Color.Black;
-            this.bttnAccept.Location = new System.Drawing.Point(17, 194);
+            this.bttnAccept.Location = new System.Drawing.Point(17, 167);
             this.bttnAccept.Name = "bttnAccept";
             this.bttnAccept.Size = new System.Drawing.Size(182, 30);
             this.bttnAccept.TabIndex = 53;
@@ -219,7 +219,7 @@ namespace MedIS.screens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 236);
+            this.ClientSize = new System.Drawing.Size(412, 209);
             this.Controls.Add(this.cbTime);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.cbDispancer);
