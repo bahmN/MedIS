@@ -10,14 +10,17 @@ namespace MedIS.screens
         public frmAddPersonal()
         {
             InitializeComponent();
+            labelMenu.Text = "Добавить врача";
         }
         public frmAddPersonal(string pk)
         {
             PK = pk;
             InitializeComponent();
-
+            labelMenu.Text = "Изменить информацию о враче";
+            labelMenu.Left = ( ClientSize.Width - labelMenu.Width ) / 2;
         }
         private string PK;
+        public bool addOrChange;
 
         // Закрыть окно
         private void bttnCancel_Click(object sender, EventArgs e)
@@ -25,7 +28,6 @@ namespace MedIS.screens
             Close();
         }
 
-        public bool addOrChange;
         // Подтвердить внесение инф-ии
         private void bttnAccept_Click(object sender, EventArgs e)
         {

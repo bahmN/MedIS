@@ -246,8 +246,9 @@ namespace MedIS.screens
             this.Font = new System.Drawing.Font("Bahnschrift", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddPersonal";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAddPersonal";
             this.panelMenuTop.ResumeLayout(false);
             this.panelMenuTop.PerformLayout();
             this.ResumeLayout(false);

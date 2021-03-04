@@ -33,6 +33,7 @@ namespace MedIS
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTop = new System.Windows.Forms.Panel();
             this.bttnClose = new System.Windows.Forms.PictureBox();
             this.labelMenu = new System.Windows.Forms.Label();
@@ -70,7 +71,7 @@ namespace MedIS
             // 
             this.bttnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bttnClose.Image = ((System.Drawing.Image)(resources.GetObject("bttnClose.Image")));
-            this.bttnClose.Location = new System.Drawing.Point(734, 2);
+            this.bttnClose.Location = new System.Drawing.Point(735, 1);
             this.bttnClose.Name = "bttnClose";
             this.bttnClose.Size = new System.Drawing.Size(20, 20);
             this.bttnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -103,7 +104,7 @@ namespace MedIS
             this.dataGridViewUsr.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewUsr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 12F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
@@ -112,7 +113,7 @@ namespace MedIS
             this.dataGridViewUsr.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewUsr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
@@ -122,11 +123,19 @@ namespace MedIS
             this.dataGridViewUsr.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridViewUsr.Location = new System.Drawing.Point(12, 31);
             this.dataGridViewUsr.Name = "dataGridViewUsr";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift", 12F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewUsr.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUsr.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(172)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewUsr.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewUsr.Size = new System.Drawing.Size(742, 579);
             this.dataGridViewUsr.TabIndex = 1;
             this.dataGridViewUsr.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUsr_CellClick);
@@ -149,7 +158,7 @@ namespace MedIS
             this.bttnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnImport.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.bttnImport.ForeColor = System.Drawing.Color.Black;
-            this.bttnImport.Location = new System.Drawing.Point(575, 658);
+            this.bttnImport.Location = new System.Drawing.Point(575, 672);
             this.bttnImport.Margin = new System.Windows.Forms.Padding(0);
             this.bttnImport.Name = "bttnImport";
             this.bttnImport.Size = new System.Drawing.Size(179, 30);
@@ -167,7 +176,7 @@ namespace MedIS
             this.bttnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnExport.Font = new System.Drawing.Font("Bahnschrift", 11F);
             this.bttnExport.ForeColor = System.Drawing.Color.Black;
-            this.bttnExport.Location = new System.Drawing.Point(575, 694);
+            this.bttnExport.Location = new System.Drawing.Point(575, 708);
             this.bttnExport.Name = "bttnExport";
             this.bttnExport.Size = new System.Drawing.Size(179, 30);
             this.bttnExport.TabIndex = 5;
@@ -244,7 +253,7 @@ namespace MedIS
             this.labelSearch.AutoSize = true;
             this.labelSearch.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.labelSearch.ForeColor = System.Drawing.Color.Black;
-            this.labelSearch.Location = new System.Drawing.Point(519, 728);
+            this.labelSearch.Location = new System.Drawing.Point(520, 622);
             this.labelSearch.Name = "labelSearch";
             this.labelSearch.Size = new System.Drawing.Size(54, 19);
             this.labelSearch.TabIndex = 13;
@@ -253,7 +262,7 @@ namespace MedIS
             // tbSearch
             // 
             this.tbSearch.Font = new System.Drawing.Font("Bahnschrift SemiLight", 8.25F);
-            this.tbSearch.Location = new System.Drawing.Point(575, 727);
+            this.tbSearch.Location = new System.Drawing.Point(576, 621);
             this.tbSearch.Margin = new System.Windows.Forms.Padding(2);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(179, 21);

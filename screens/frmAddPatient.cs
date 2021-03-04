@@ -19,7 +19,7 @@ namespace MedIS.screens
         }
         private string PK;
         public bool addOrChange;
-
+        
         // Подтвердить внесение информации
         private void bttnAccept_Click(object sender, EventArgs e)
         {

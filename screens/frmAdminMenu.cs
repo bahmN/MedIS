@@ -12,6 +12,7 @@ namespace MedIS
         public frmAdminMenu()
         {
             InitializeComponent();
+            labelMenu.Left = ( ClientSize.Width - labelMenu.Width ) / 2;
         }
 
         private void frmAdminMenu_Load(object sender, EventArgs e)

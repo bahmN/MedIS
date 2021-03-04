@@ -13,7 +13,6 @@ namespace MedIS.screens
             InitializeComponent();
             Width = 857;
             Height = 706;
-            panelTop.Width = 857;
             labelMenu.Left = ( ClientSize.Width - labelMenu.Width ) / 2;
         }
 
@@ -62,6 +61,8 @@ namespace MedIS.screens
             fAP.tbPassport.Text = dataGridViewPat.SelectedRows[0].Cells[5].Value.ToString();
             fAP.addOrChange = false;
             fAP.ShowDialog();
+            // Закрыть правый блок инф-ии после изменения
+            bttnCloseRight_Click(sender, e);
         }
 
         // Удалить пациента
@@ -72,6 +73,17 @@ namespace MedIS.screens
             Patient delete = new Patient();
             delete.deletePatient(headerText, selectRow);
             frmUserMenu_Load(sender, e);
+
+            // Очистка label'ов после удаления данных
+            labelTxtPolis.Text = null; 
+            labelTxtFN.Text = null; 
+            labelTxtDateBirth.Text = null; 
+            labelTxtAdress.Text = null;
+            labelTxtPhone.Text = null; 
+            labelTxtPassport.Text = null;
+
+            // Закрыть правый блок инф-ии после удаления
+            bttnCloseRight_Click(sender, e);
         }
 
         // Поиск
@@ -89,10 +101,27 @@ namespace MedIS.screens
         {
             try {
                 dataGridViewPat.Rows[e.RowIndex].Selected = true;
+
+                Width = 1212;
+                Height = 706;
+                labelMenu.Left = ( ClientSize.Width - labelMenu.Width ) / 2;
+
+                labelTxtPolis.Text = dataGridViewPat.SelectedRows[0].Cells[0].Value.ToString(); // Отобразить Полис в label
+                labelTxtFN.Text = dataGridViewPat.SelectedRows[0].Cells[1].Value.ToString(); // Отобразить ФИО в label
+                labelTxtDateBirth.Text = dataGridViewPat.SelectedRows[0].Cells[2].Value.ToString(); // Отобразить Дата рождения в label
+                labelTxtAdress.Text = dataGridViewPat.SelectedRows[0].Cells[3].Value.ToString(); // Отобразить Адрес в label
+                labelTxtPhone.Text = dataGridViewPat.SelectedRows[0].Cells[4].Value.ToString(); // Отобразить Телефон в label
+                labelTxtPassport.Text = dataGridViewPat.SelectedRows[0].Cells[5].Value.ToString(); // Отобразить Паспортные данные в label
             }
             catch { }
         }
 
-        
+        // Закрыть правый блок инф-ии о пациенте
+        private void bttnCloseRight_Click(object sender, System.EventArgs e)
+        {
+            Width = 857;
+            Height = 706;
+            labelMenu.Left = ( ClientSize.Width - labelMenu.Width ) / 2;
+        }
     }
 }
