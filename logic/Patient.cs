@@ -31,6 +31,22 @@ namespace MedIS.logic
             cDel.ExecuteNonQuery();
             return cDel;
         }
+        public MySqlCommand deletePatient2(string NumPatient)
+        {
+            Connection con = new Connection();
+            MySqlCommand cDel = new MySqlCommand("DELETE FROM `записи к врачу` WHERE `Номер пациента` = '" + NumPatient + "'", con.connect());
+            cDel.ExecuteNonQuery();
+            return cDel;
+        }
+        public MySqlCommand deletePatient3(string NumPatient)
+        {
+            Connection con = new Connection();
+            MySqlCommand cDel = new MySqlCommand("DELETE FROM Диагнозы WHERE `Номер пациента` = '" + NumPatient + "'", con.connect());
+            cDel.ExecuteNonQuery();
+            return cDel;
+        }
+
+
 
         public MySqlDataAdapter searchPatient(string tbSearch)
         {

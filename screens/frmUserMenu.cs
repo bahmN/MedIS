@@ -32,7 +32,7 @@ namespace MedIS.screens
             dataGridViewPat.RowHeadersVisible = false; // Hide the display of the left column
             dataGridViewPat.AllowUserToAddRows = false; // Hide the display of the bottom column
         }
-
+        string numPatient;
         // Закрыть окно
         private void bttnClose_Click(object sender, System.EventArgs e)
         {
@@ -69,10 +69,12 @@ namespace MedIS.screens
         {
             string headerText = dataGridViewPat.Columns[0].HeaderText;
             string selectRow = dataGridViewPat.SelectedRows[0].Cells[0].Value.ToString();
+            string numPatien = dataGridViewPat.SelectedRows[0].Cells[0].Value.ToString();
             Patient delete = new Patient();
             delete.deletePatient(headerText, selectRow);
+            delete.deletePatient2(numPatien);
+            delete.deletePatient3(numPatient);
             frmUserMenu_Load(sender, e);
-
             // Очистка label'ов после удаления данных
             labelTxtPolis.Text = null;
             labelTxtFN.Text = null;
@@ -127,7 +129,12 @@ namespace MedIS.screens
                 dataGridViewAppointment.Columns[2].Visible = false; //Скрыть колонку с номером врача   
                 dataGridViewAppointment.Columns[3].Width = 115;
                 labelTxtDoc.Text = null;
-                labelTxtNote.Text = null;
+
+                numPatient = dataGridViewPat.SelectedRows[0].Cells[0].Value.ToString();
+
+                labelTxtDiagnosis.Text = null;
+                labelTxtResult.Text = null;
+                labelTxtDiagnosisNote.Text = null;
             }
             catch { }
         }
@@ -141,9 +148,9 @@ namespace MedIS.screens
                 string docNum = dataGridViewAppointment.SelectedRows[0].Cells[2].Value.ToString();
                 MySqlCommand cFullNameUser = new MySqlCommand("SELECT `ФИО врача` FROM персонал WHERE `Номер врача`= '" + docNum + "'", con.connect());
                 object docFullNameObj = cFullNameUser.ExecuteScalar();
-                string docFullName = docFullNameObj.ToString();
-                labelTxtDoc.Text = docFullName;
-                labelTxtNote.Text = dataGridViewAppointment.SelectedRows[0].Cells[6].Value.ToString();
+                if (docFullNameObj != null) {
+                    labelTxtDoc.Text = docFullNameObj.ToString();
+                }
 
 
 
@@ -155,13 +162,12 @@ namespace MedIS.screens
                 object docDiagnosis = cDiagnosis.ExecuteScalar();
                 MySqlCommand cResult = new MySqlCommand("SELECT Результат FROM диагнозы WHERE `Номер записи`= '" + numAppointment + "'", con.connect());
                 object docResult = cResult.ExecuteScalar();
-                MySqlCommand cNote= new MySqlCommand("SELECT Примечание FROM диагнозы WHERE `Номер записи`= '" + numAppointment + "'", con.connect());
+                MySqlCommand cNote = new MySqlCommand("SELECT Примечание FROM диагнозы WHERE `Номер записи`= '" + numAppointment + "'", con.connect());
                 object docNote = cNote.ExecuteScalar();
                 if (docDiagnosis != null && docResult != null && docNote != null) {
                     labelTxtDiagnosis.Text = docDiagnosis.ToString();
                     labelTxtResult.Text = docResult.ToString();
-                    labelTxtNote.Text = docNote.ToString();
-
+                    labelTxtDiagnosisNote.Text = docNote.ToString();
                 }
 
             }
@@ -180,17 +186,21 @@ namespace MedIS.screens
         private void bttnAddAppointment_Click(object sender, System.EventArgs e)
         {
             frmAddAppoinment fAA = new frmAddAppoinment();
-            fAA.numbPatient = dataGridViewPat.SelectedRows[0].Cells[0].Value.ToString();
+            fAA.numbPatient = numPatient;
             fAA.ShowDialog();
         }
 
         // Добавить диагноз
         private void bttnAddResults_Click(object sender, System.EventArgs e)
         {
-            frmAddDiagnosis fAD = new frmAddDiagnosis();
-            fAD.NumbAppoinment = dataGridViewAppointment.SelectedRows[0].Cells[0].Value.ToString();
-            fAD.addOrChange = true;
-            fAD.ShowDialog();
+            try {
+                frmAddDiagnosis fAD = new frmAddDiagnosis();
+                fAD.NumbAppoinment = dataGridViewAppointment.SelectedRows[0].Cells[0].Value.ToString();
+                fAD.NumPatient = numPatient;
+                fAD.addOrChange = true;
+                fAD.ShowDialog();
+            }
+            catch { }
         }
 
         // Добавить результат диагноза

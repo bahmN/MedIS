@@ -19,9 +19,9 @@ namespace MedIS.screens
             string date = dateTimePicker.Text;
             string ambul = cbAmbul.Text;
             string dispanser = cbDispancer.Text;
-            string note = tbNote.Text;
+            string time = cbTime.Text;
             DoctorAppointment add = new DoctorAppointment();
-            add.addAppoinment(numbPatient, numbDoctor.SelectedValue, date, ambul, dispanser, note);
+            add.addAppoinment(numbPatient, numbDoctor.SelectedValue, date, ambul, dispanser, time);
             Close();
         }
 

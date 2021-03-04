@@ -71,7 +71,7 @@ namespace MedIS
             // 
             this.bttnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bttnClose.Image = ((System.Drawing.Image)(resources.GetObject("bttnClose.Image")));
-            this.bttnClose.Location = new System.Drawing.Point(735, 1);
+            this.bttnClose.Location = new System.Drawing.Point(735, 2);
             this.bttnClose.Name = "bttnClose";
             this.bttnClose.Size = new System.Drawing.Size(20, 20);
             this.bttnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;

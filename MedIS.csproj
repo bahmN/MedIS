@@ -51,9 +51,6 @@
     <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.8.0.23\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="MySqlBackup, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\MySqlBackup.1.0.1\lib\MySqlBackup.dll</HintPath>
-    </Reference>
     <Reference Include="Renci.SshNet, Version=2020.0.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>packages\SSH.NET.2020.0.0\lib\net40\Renci.SshNet.dll</HintPath>
     </Reference>
@@ -95,9 +92,43 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="logic\Auth.cs" />
+    <Compile Include="logic\Diagnosis.cs" />
+    <Compile Include="logic\DoctorAppointment.cs" />
     <Compile Include="logic\Hashing.cs" />
+    <Compile Include="logic\Patient.cs" />
     <Compile Include="logic\Personal.cs" />
     <Compile Include="logic\Backup.cs" />
+    <Compile Include="screens\frmAddAppoinment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\frmAddAppoinment.Designer.cs">
+      <DependentUpon>frmAddAppoinment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="screens\frmAddDiagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\frmAddDiagnosis.Designer.cs">
+      <DependentUpon>frmAddDiagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="screens\frmAddPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\frmAddPatient.Designer.cs">
+      <DependentUpon>frmAddPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="screens\frmAuth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\frmAuth.Designer.cs">
+      <DependentUpon>frmAuth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="screens\frmUserMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="screens\frmUserMenu.Designer.cs">
+      <DependentUpon>frmUserMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="screens\frmAddPersonal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +144,15 @@
     <Compile Include="logic\Connection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="screens\frmAddAppoinment.resx">
+      <DependentUpon>frmAddAppoinment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\frmAddDiagnosis.resx">
+      <DependentUpon>frmAddDiagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\frmAddPatient.resx">
+      <DependentUpon>frmAddPatient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="screens\frmAddPersonal.resx">
       <DependentUpon>frmAddPersonal.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +168,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="screens\frmAuth.resx">
+      <DependentUpon>frmAuth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\frmUserMenu.resx">
+      <DependentUpon>frmUserMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

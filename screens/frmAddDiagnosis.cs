@@ -14,12 +14,14 @@ namespace MedIS.screens
         {
             PK = pk;
             InitializeComponent();
-            labelMenu.Text = "Изменить информацию о враче";
+            labelMenu.Text = "Добавить результаты анализов";
             labelMenu.Left = ( ClientSize.Width - labelMenu.Width ) / 2;
+            tbDiagnosis.ReadOnly = true;
         }
         public string NumbAppoinment;
         private string PK;
         public bool addOrChange;
+        public string NumPatient;
         // Подтивердить
         private void bttnAccept_Click(object sender, EventArgs e)
         {
@@ -28,7 +30,7 @@ namespace MedIS.screens
                 string result = cbResult.Text;
                 string note = tbNote.Text;
                 Diagnosis add = new Diagnosis();
-                add.addDiagnosis(name, NumbAppoinment, result, note);
+                add.addDiagnosis(name, NumbAppoinment, result, note, NumPatient);
                 Close();
             }
             else if (addOrChange == false){

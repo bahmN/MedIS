@@ -46,8 +46,9 @@ namespace MedIS
             fAP.addOrChange = false;
             fAP.tbFullName.Text = dataGridViewUsr.SelectedRows[0].Cells[1].Value.ToString();
             fAP.tbPos.Text = dataGridViewUsr.SelectedRows[0].Cells[2].Value.ToString();
-            fAP.tbNote.Text = dataGridViewUsr.SelectedRows[0].Cells[3].Value.ToString();
-            fAP.tbSpec.Text = dataGridViewUsr.SelectedRows[0].Cells[4].Value.ToString();
+            fAP.tbSpec.Text = dataGridViewUsr.SelectedRows[0].Cells[3].Value.ToString();
+            fAP.tbNote.Text = dataGridViewUsr.SelectedRows[0].Cells[4].Value.ToString();
+            fAP.tbLogin.Text = dataGridViewUsr.SelectedRows[0].Cells[5].Value.ToString();
             fAP.ShowDialog();
         }
 

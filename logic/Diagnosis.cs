@@ -4,11 +4,11 @@ namespace MedIS.logic
 {
     class Diagnosis
     {
-        public MySqlCommand addDiagnosis(string Name, string NumbAppointment, string Result, string Note)
+        public MySqlCommand addDiagnosis(string Name, string NumbAppointment, string Result, string Note, string NumPatient)
         {
             Connection con = new Connection();
-            MySqlCommand cAdd = new MySqlCommand("INSERT INTO диагнозы(Название, `Номер записи`, Результат, Примечание)" +
-                " VALUES ('" + Name + "', '" + NumbAppointment + "', '" + Result + "', '" + Note + "')", con.connect());
+            MySqlCommand cAdd = new MySqlCommand("INSERT INTO диагнозы(Название, `Номер записи`, Результат, Примечание, `Номер пациента`)" +
+                " VALUES ('" + Name + "', '" + NumbAppointment + "', '" + Result + "', '" + Note + "', '" + NumPatient + "')", con.connect());
             cAdd.ExecuteNonQuery();
 
             return cAdd;

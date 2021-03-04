@@ -175,6 +175,9 @@ namespace MedIS.screens
             this.Font = new System.Drawing.Font("Bahnschrift", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddDiagnosis";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddDiagnosis";
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();

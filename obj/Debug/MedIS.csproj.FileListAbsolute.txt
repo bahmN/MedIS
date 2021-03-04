@@ -34,4 +34,8 @@ D:\cSharp\MedIS\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\cSharp\MedIS\obj\Debug\MedIS.frmAdminMenu.resources
 D:\cSharp\MedIS\obj\Debug\MedIS.csproj.CopyComplete
 D:\cSharp\MedIS\obj\Debug\MedIS.screens.frmAddPersonal.resources
-D:\cSharp\MedIS\bin\Debug\MySqlBackup.dll
+D:\cSharp\MedIS\obj\Debug\MedIS.screens.frmUserMenu.resources
+D:\cSharp\MedIS\obj\Debug\MedIS.screens.frmAddPatient.resources
+D:\cSharp\MedIS\obj\Debug\MedIS.screens.frmAddAppoinment.resources
+D:\cSharp\MedIS\obj\Debug\MedIS.screens.frmAddDiagnosis.resources
+D:\cSharp\MedIS\obj\Debug\MedIS.screens.frmAuth.resources
